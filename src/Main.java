@@ -36,8 +36,8 @@ public class Main {
         System.out.print("Choose an option: ");
     }
 
-    public static void sayHello() {
-        System.out.println("Hello from Branch B!");
+    ppublic static void sayHello() {
+        System.out.println("Hello from Branch A and Branch B!");
     }
 
     public static void addNumbers(Scanner scanner) {
