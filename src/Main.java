@@ -7,23 +7,14 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
-            System.out.println("\n===== MENU =====");
-            System.out.println("1. Say Hello");
-            System.out.println("2. Add Two Numbers");
-            System.out.println("3. Exit");
-            System.out.print("Choose an option: ");
-
+            showMenu();
             int choice = scanner.nextInt();
 
             if (choice == 1) {
-                System.out.println("Hello! Nice to meet you.");
+                sayHello();
             }
             else if (choice == 2) {
-                System.out.print("Enter first number: ");
-                int a = scanner.nextInt();
-                System.out.print("Enter second number: ");
-                int b = scanner.nextInt();
-                System.out.println("Result: " + (a + b));
+                addNumbers(scanner);
             }
             else if (choice == 3) {
                 System.out.println("Exiting program...");
@@ -35,5 +26,25 @@ public class Main {
         }
 
         scanner.close();
+    }
+
+    public static void showMenu() {
+        System.out.println("\n===== MENU =====");
+        System.out.println("1. Say Hello");
+        System.out.println("2. Add Two Numbers");
+        System.out.println("3. Exit");
+        System.out.print("Choose an option: ");
+    }
+
+    public static void sayHello() {
+        System.out.println("Hello! Nice to meet you.");
+    }
+
+    public static void addNumbers(Scanner scanner) {
+        System.out.print("Enter first number: ");
+        int a = scanner.nextInt();
+        System.out.print("Enter second number: ");
+        int b = scanner.nextInt();
+        System.out.println("Result: " + (a + b));
     }
 }
