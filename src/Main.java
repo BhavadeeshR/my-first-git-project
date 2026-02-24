@@ -37,7 +37,7 @@ public class Main {
     }
 
     public static void sayHello() {
-        System.out.println("Hello! Nice to meet you.");
+        System.out.println("Hello from Branch A!");
     }
 
     public static void addNumbers(Scanner scanner) {
