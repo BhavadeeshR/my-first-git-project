@@ -5,46 +5,37 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
+        Calculator calculator = new Calculator();
+        Menu menu = new Menu();
 
         while (true) {
-            showMenu();
+
+            menu.show();
             int choice = scanner.nextInt();
 
             if (choice == 1) {
-                sayHello();
+                System.out.print("Enter two numbers: ");
+                int a = scanner.nextInt();
+                int b = scanner.nextInt();
+                System.out.println("Result: " + calculator.add(a, b));
             }
             else if (choice == 2) {
-                addNumbers(scanner);
+                System.out.print("Enter two numbers: ");
+                int a = scanner.nextInt();
+                int b = scanner.nextInt();
+                System.out.println("Result: " + calculator.subtract(a, b));
             }
             else if (choice == 3) {
-                System.out.println("Exiting program...");
-                break;
+                System.out.print("Enter two numbers: ");
+                int a = scanner.nextInt();
+                int b = scanner.nextInt();
+                System.out.println("Result: " + calculator.multiply(a, b));
             }
-            else {
-                System.out.println("Invalid option. Try again.");
+            else if (choice == 4) {
+                break;
             }
         }
 
         scanner.close();
-    }
-
-    public static void showMenu() {
-        System.out.println("\n===== MENU =====");
-        System.out.println("1. Say Hello");
-        System.out.println("2. Add Two Numbers");
-        System.out.println("3. Exit");
-        System.out.print("Choose an option: ");
-    }
-
-    ppublic static void sayHello() {
-        System.out.println("Hello from Branch A and Branch B!");
-    }
-
-    public static void addNumbers(Scanner scanner) {
-        System.out.print("Enter first number: ");
-        int a = scanner.nextInt();
-        System.out.print("Enter second number: ");
-        int b = scanner.nextInt();
-        System.out.println("Result: " + (a + b));
     }
 }
